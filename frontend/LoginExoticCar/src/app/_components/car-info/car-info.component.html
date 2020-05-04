@@ -46,20 +46,29 @@
 
 
 <div class="container-fluid">
+
+    <div class="row justify-content-md-center ">
+        <h2> {{carModel.name}} </h2>
+    </div>
+
     <div class="row justify-content-md-center p-3 mb-2 bg-primary text-white" >
 
-        <h2> {{carModel.name}} </h2>
+        <!-- <div class="row" >
+            <h2> {{carModel.name}} </h2>
+        </div> -->
 
         <br>
         <br>
 
-        <img src={{carModel.imageUrl}} >
-
-        <p>{{carModel.description}}</p>
+        <div class="row" ></div>
+            <img src={{carModel.imageUrl}} >
+        
+            <p>{{carModel.description}}</p>
+        </div>
 
         <br>
 
-        <h4 class="text-align: center"><b>What users are saying:</b></h4>
+        <h4 class="justify-content-md-center"><b>What users are saying:</b></h4>
 
         <div *ngIf="this.mapPosts.size == 0">
             <br>
@@ -68,11 +77,10 @@
         </div>
         
 
-        <div *ngFor="let tempPost of this.mapPosts.keys()">
-            <br>
-            <br>
+        <div class=" justify-content-md-center " *ngFor="let tempPost of this.mapPosts.keys()">
+        
 
-            <div class="container">
+            <div class="container justify-content-md-center">
                 <blockquote class="quote-box">
                   <p class="quotation-mark">
                     “
@@ -80,20 +88,19 @@
                   <p class="quote-text">
                     {{this.tempPost.content}}
                   </p>
-                  <hr>
+                  
                   <div class="blog-post-actions">
                     <p class="blog-post-bottom pull-left">
                         {{this.mapPosts.get(tempPost)}}
                     </p>
                   </div>
+
+                  
                 </blockquote>
             </div>
 
         </div>
-    
-    </div>
 
-     
 
     <br>
 
