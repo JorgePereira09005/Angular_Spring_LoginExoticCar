@@ -10,3 +10,6 @@ Please edit the "spring.datasource.username" and "spring.datasource.password" fi
 Run the SQL script found inside to create the MySQL database schema. Password for every default user is "123lol".
 
 ![image](https://user-images.githubusercontent.com/61985975/80981139-74087e00-8e21-11ea-8e5a-2f030f36fa82.png)
+
+
+![image](https://user-images.githubusercontent.com/61985975/80981990-95b63500-8e22-11ea-992d-6f24f3a154d4.png)
