@@ -1,0 +1,104 @@
+<style>
+    blockquote{
+    border-left:none
+}
+
+.quote-badge{
+    background-color: rgba(0, 0, 0, 0.2);   
+}
+
+.quote-box{
+    
+    overflow: hidden;
+    margin-top: -50px;
+    padding-top: -100px;
+    border-radius: 17px;
+    background-color: darkgrey;
+    margin-top: 25px;
+    color:white;
+    width: 325px;
+    box-shadow: 2px 2px 2px 2px #E0E0E0;
+    
+}
+
+.quotation-mark{
+    
+    margin-top: -10px;
+    font-weight: bold;
+    font-size:100px;
+    color:white;
+    font-family: "Times New Roman", Georgia, Serif;
+    
+}
+
+.quote-text{
+    
+    font-size: 19px;
+    margin-top: -65px;
+}
+
+.align {
+    display: block;
+    margin: 0 auto;
+}
+
+</style>
+
+
+<div class="container-fluid">
+    <div class="row justify-content-md-center p-3 mb-2 bg-primary text-white" >
+
+        <h2> {{carModel.name}} </h2>
+
+        <br>
+        <br>
+
+        <img src={{carModel.imageUrl}} >
+
+        <p>{{carModel.description}}</p>
+
+        <br>
+
+        <h4 class="text-align: center"><b>What users are saying:</b></h4>
+
+        <div *ngIf="this.mapPosts.size == 0">
+            <br>
+            <br>
+            <h6 class="text-align: center">There are no comments.</h6>
+        </div>
+        
+
+        <div *ngFor="let tempPost of this.mapPosts.keys()">
+            <br>
+            <br>
+
+            <div class="container">
+                <blockquote class="quote-box">
+                  <p class="quotation-mark">
+                    “
+                  </p>
+                  <p class="quote-text">
+                    {{this.tempPost.content}}
+                  </p>
+                  <hr>
+                  <div class="blog-post-actions">
+                    <p class="blog-post-bottom pull-left">
+                        {{this.mapPosts.get(tempPost)}}
+                    </p>
+                  </div>
+                </blockquote>
+            </div>
+
+        </div>
+    
+    </div>
+
+     
+
+    <br>
+
+    <a class="btn btn-primary center align" routerLink="/dashboard">    
+        To Dashboard
+    </a>
+
+</div>

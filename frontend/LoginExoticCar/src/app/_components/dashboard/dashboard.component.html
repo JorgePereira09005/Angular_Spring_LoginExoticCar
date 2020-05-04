@@ -1,0 +1,48 @@
+<style>
+    .center {
+        margin: 0;
+        position: absolute;
+        left: 50%;
+        -ms-transform: translateX(-50%);
+        transform: translateX(-50%);
+    }
+</style>
+
+<div class="container">
+
+    <header class="jumbotron center">
+
+
+        <p class="text-align: center">Logged in successfully. Click the pictures to view user comments!</p>
+
+        <br>
+        <br>
+        <br>
+
+        <div class="container-fluid">
+
+            <a class="btn btn-primary center" routerLink="/userlist">    
+                View user list
+            </a>
+
+            <br>
+            <br>
+            <br>
+
+            <div *ngFor="let carmodel of carModels">
+
+                <a routerLink="/carinfo/{{carmodel.id}}">
+                    <img src={{carmodel.imageUrl}} class="img-responsive"> 
+                </a>
+
+                <br>
+
+            </div>
+
+        </div>
+
+
+
+    </header>
+
+</div>

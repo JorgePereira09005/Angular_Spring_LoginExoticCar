@@ -1,0 +1,52 @@
+<style>
+    .center {
+        margin: 0;
+        position: absolute;
+        left: 50%;
+        -ms-transform: translateX(-50%);
+        transform: translateX(-50%);
+    }
+</style>
+
+<br>
+
+<div class="container-fluid">
+    <div class="row justify-content-md-center p-3 mb-2 bg-primary text-white" >
+
+        <div class="col-sm">
+            User Id
+        </div>
+        <div class="col-sm">
+            Username
+        </div>
+        <div class="col-sm">
+            First and last names
+        </div>
+    
+    </div>
+
+    <div class="row" *ngFor="let tempUser of this.userList">
+
+        <div class="col-sm">
+            {{tempUser.id}}
+            <hr>
+        </div>
+        <div class="col-sm">
+            {{tempUser.userName}}
+            <hr>
+        </div>
+        <div class="col-sm">
+            {{tempUser.firstName}} {{tempUser.lastName}}
+            <hr>
+        </div>
+    
+    </div>  
+
+    <br>
+
+    <a class="btn btn-primary center" routerLink="/dashboard">    
+        To Dashboard
+    </a>
+
+</div>
+
