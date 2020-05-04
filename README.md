@@ -13,3 +13,5 @@ Run the SQL script found inside to create the MySQL database schema. Password fo
 
 
 ![image](https://user-images.githubusercontent.com/61985975/80981990-95b63500-8e22-11ea-992d-6f24f3a154d4.png)
+
+![image](https://user-images.githubusercontent.com/61985975/80984118-59d09f00-8e25-11ea-9975-0f0c4e11a5ff.png)
